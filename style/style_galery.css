@@ -1,0 +1,184 @@
+﻿body {
+    margin: 0;
+}
+#top_bar {
+    position: absolute;
+    margin-bottom: 5px;
+}
+.sentence {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 40px;
+    width: 350px;
+    text-align: center;
+    float: left;
+}
+
+.middle {
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.middle2 {
+    margin-top: 60px;
+    margin-left: 380px;
+}
+
+.right {
+    margin-top: -180px;
+    margin-left: 860px;
+    text-transform: uppercase;
+}
+
+
+#mmph {
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: center;
+    color: white;
+    height: 315px;
+    background-image: url(../img/gallery_div1.png);
+    background-position: right;
+}
+#mmph2 {
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: center;
+    color: white;
+    height: 315px;
+    background-image: url(../img/gallery_div2.png);
+    background-position: left;
+}
+
+#mmph3 {
+    color: white;
+    text-align: center;
+    height: 315px;
+    width: 100%;
+    background-image: url(../img/gallery_div3.png);
+    background-position: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#photoses {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    background: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo {
+    background: white;
+    margin: 10px 0;
+    width: 340px;
+    padding: 10px;
+    opacity: 0.7;
+    border-radius: 5px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    transition: 0.3s all;
+    transform: rotate(5deg) scale(0.7);
+    transition: 0.3s all ease-in-out;
+}
+
+.photo img {
+    width: 320px;
+}
+
+.photo figcaption {
+    
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.photo:nth-child(even) {
+    transform: rotate(-2deg) scale(0.8)
+}
+
+.photo:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#photoses2 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+}
+
+.flip-card,
+.flip-card2,
+.flip-card3 {
+  margin: 60px auto;
+  width: 300px;
+  height: 450px;
+  border-radius: 6px;
+  position: relative;
+  perspective: 350px;
+}
+
+.flip-card::before,
+.flip-card::after,
+.flip-card2::before,
+.flip-card2::after,
+.flip-card3::before,
+.flip-card3::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffffff;
+  border-radius: 6px;
+  box-sizing: border-box;
+  border: 3px solid #171212;
+  transition: 0.6s transform linear;
+  backface-visibility: hidden;
+}
+
+.flip-card::after {
+    background-image: url(../img/man1_front.jpg)
+}
+.flip-card2::after {
+    background-image: url(../img/woman1_front.jpg)
+}
+.flip-card3::after {
+  background-image: url(../img/man2_front.jpg)
+}
+
+.flip-card:hover::after,
+.flip-card2:hover::after,
+.flip-card3:hover::after {
+  transform: rotateY(180deg);
+}
+
+.flip-card::before {
+  background: url(../img/man1_back.jpg);
+  transform: rotateY(180deg);
+}
+.flip-card2::before {
+  background: url(../img/woman1_back.jpg);
+  transform: rotateY(180deg);
+}
+.flip-card3::before {
+  background: url(../img/man2_back.jpg);
+  transform: rotateY(180deg);
+}
+
+
+
+.flip-card:hover::before,
+.flip-card2:hover::before,
+.flip-card3:hover::before {
+  transform: rotate(360deg);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    margin: 0px;
+}
